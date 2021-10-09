@@ -5,7 +5,7 @@ from configurations.models import Configuration
 
 
 class Project(models.Model):
-    configuration = models.ForeignKey(Configuration, on_delete=models.PROTECT)
+    # configuration = models.ForeignKey(Configuration, on_delete=models.PROTECT)
     #TODO: The other possible values for on_delete are: CASCADE (don't want this one), RESTRICT (not sure about this one)
     name = models.CharField(max_length=200)
     description = models.TextField()
