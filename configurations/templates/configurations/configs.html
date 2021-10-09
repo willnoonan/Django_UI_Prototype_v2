@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+
+<p>Configurations</p>
+
+<ul>
+    {% for config in configs %}
+        <li>
+            <p>{{ config }}</p>
+            <p>{{ config.date_added|date:'M d, Y H:i' }}</p>
+        </li>
+    {% empty %}
+        <li>No configurations have been added yet.</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'configurations:new_configuration' %}">Add a new configuration</a>
+
+{% endblock content %}

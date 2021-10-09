@@ -1,0 +1,12 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <p>Add a new configuration:</p>
+
+    <form action="{% url 'configurations:new_configuration' %}" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">Add configuration</button> <a href="{% url 'configurations:configurations' %}">Cancel</a>
+    </form>
+
+{% endblock content %}
