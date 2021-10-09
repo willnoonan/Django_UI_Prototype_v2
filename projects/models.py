@@ -15,7 +15,7 @@ class Project(models.Model):
         verbose_name_plural = 'projects'
 
     def __str__(self):
-        desc = self.description
+        text = self.name
         size = 50
-        string = f'{desc[:size]}'
+        string = f'{text[:size]}'
         return string if len(string) < size else string + '...'
