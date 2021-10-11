@@ -6,6 +6,13 @@
     <form action="{% url 'projects:new_project' %}" method='post'>
         {% csrf_token %}
         {{ form.as_p }}
+          <label for="config_select">Choose a configuration:</label>
+              <select name="config_select" id="config_select">
+                  {% for config in configurations %}
+                      <option value="selection">{{ config }}</option>
+                  {% endfor %}
+              </select>
+            <br><br>
         <button name="submit">Add project</button> <a href="{% url 'projects:projects' %}">Cancel</a>
     </form>
 

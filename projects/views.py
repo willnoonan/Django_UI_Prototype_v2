@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Project
 from .forms import ProjectForm
+from configurations.models import Configuration
 # Create your views here.
 
 
@@ -11,6 +12,7 @@ def projects(request):
 
 
 def new_project(request):
+    configurations = Configuration.objects.all()
     if request.method != 'POST':
         form = ProjectForm()
     else:
@@ -19,5 +21,5 @@ def new_project(request):
             form.save()
             return redirect('projects:projects')
 
-    context = {'form': form}
+    context = {'form': form, 'configurations': configurations}
     return render(request, 'projects/new_project.html', context)
