@@ -36,6 +36,9 @@ INSTALLED_APPS = [
     'configurations',
     'projects',
 
+    # Third party:
+    'bootstrap4',
+
     # Django defaults:
     'django.contrib.admin',
     'django.contrib.auth',
