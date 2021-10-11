@@ -5,8 +5,6 @@ from configurations.models import Configuration
 
 
 class Project(models.Model):
-    configuration = models.ManyToManyField(Configuration) #TODO this property is likely unecessary and should be removed
-    #TODO: The other possible values for on_delete are: CASCADE (don't want this one), RESTRICT (not sure about this one)
     name = models.CharField(max_length=200)
     description = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
