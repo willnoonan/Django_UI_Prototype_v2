@@ -13,6 +13,9 @@ def projects(request):
 
 def new_project(request):
     configurations = Configuration.objects.all()
+    # The id of the selected configuration gets stored in the html variable config_id that
+    # I created in new_project.html. It's available in request.POST after the form
+    # is submitted.
     if request.method != 'POST':
         form = ProjectForm()
     else:

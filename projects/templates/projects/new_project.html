@@ -6,10 +6,10 @@
     <form action="{% url 'projects:new_project' %}" method='post'>
         {% csrf_token %}
         {{ form.as_p }}
-          <label for="config_select">Choose a configuration:</label>
-              <select name="config_select" id="config_select">
+          <label for="config_selector">Choose a configuration:</label>
+              <select name="config_id" id="config_selector">
                   {% for config in configurations %}
-                      <option value="selection">{{ config }}</option>
+                      <option value="{{config.id}}">{{ config }}</option>
                   {% endfor %}
               </select>
             <br><br>
