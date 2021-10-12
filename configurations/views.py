@@ -8,6 +8,10 @@ def configurations(request):
     context = {'configs': configs}
     return render(request, 'configurations/configs.html', context)
 
+def configuration(request, config_id):
+    config = Configuration.objects.get(id=config_id)
+    return render(request, 'configurations/config.html', {'config': config})
+
 def new_configuration(request):
     if request.method != 'POST':
         form = ConfigurationForm()

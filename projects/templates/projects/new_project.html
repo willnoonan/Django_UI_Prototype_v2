@@ -12,6 +12,7 @@
                       <option value="{{config.id}}">{{ config }}</option>
                   {% endfor %}
               </select>
+        <a href="{% url 'configurations:new_configuration' %}">Add a new configuration</a>
             <br><br>
         <button name="submit">Add project</button> <a href="{% url 'projects:projects' %}">Cancel</a>
     </form>

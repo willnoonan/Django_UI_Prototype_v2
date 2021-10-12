@@ -7,7 +7,7 @@
 <ul>
     {% for config in configs %}
         <li>
-            <p>{{ config }}</p>
+            <p><a href="{% url 'configurations:configuration' config.id %}">{{config}}</a></p>
             <p>{{ config.date_added|date:'M d, Y H:i' }}</p>
         </li>
     {% empty %}

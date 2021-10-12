@@ -1,0 +1,9 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<p>Configuration: {{ config }}</p>
+<p>{{ config.date_added|date:'M d, Y H:i' }}</p>
+
+
+{% endblock content %}
