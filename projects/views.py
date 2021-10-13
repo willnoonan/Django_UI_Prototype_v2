@@ -11,6 +11,10 @@ def projects(request):
     return render(request, 'projects/projects.html', context)
 
 
+def project(request, proj_id):
+    project = Project.objects.get(id=proj_id)
+    return render(request, 'projects/project.html', {'project': project})
+
 def new_project(request):
     configurations = Configuration.objects.all()
     # The id of the selected configuration gets stored in the html variable config_id that
