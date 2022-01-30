@@ -1,4 +1,4 @@
-# UI_Prototype_v2
+# Django_UI_Prototype_v2
 
 If you're running this project for the first time, run the following commands:
 
