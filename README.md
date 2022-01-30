@@ -4,8 +4,6 @@ If you're running this project for the first time, run the following commands:
 
 pip install django
 
-# pip install django-bootstrap4  # may not need to install this
-
 python manage.py migrate
 
 python manage.py runserver
