@@ -1,6 +1,6 @@
 # Django_UI_Prototype_v2
 
-If you're running this project for the first time, run the following commands:
+All development done in PyCharm. If running this project for the first time, run the following commands in a terminal in PyCharm:
 
 pip install django
 
